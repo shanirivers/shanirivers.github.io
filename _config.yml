@@ -1,14 +1,14 @@
 # Site Build Settings
 
-# Jekyll-paginate-v2 configuration
-#  pagination:
-#   enabled: true
-#   per_page: 5
-#   permalink: '/page/:num/'
-#   title: ':title - page :num of :max'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
+#Jekyll-paginate-v2 configuration
+#pagination:
+# enabled: true
+# per_page: 5
+# permalink: '/page/:num/'
+# title: ':title - page :num of :max'
+# limit: 10
+# sort_field: 'date'
+# sort_reverse: true
 
 # jekyll-paginate configuration
 paginate:            5
@@ -21,7 +21,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Swift and Things'
-description:	       'a blog and companion site for Swift with Shani'
+description:	       'blog & companion for Swift with Shani'
 author:              'Shani Rivers'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines

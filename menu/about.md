@@ -2,4 +2,7 @@
 layout: page
 title: About
 ---
-Lagrange is a minimalist Jekyll. It is intended to have a clean, content focused interface for blog writing. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-01-01-welcome-to-lagrange %}).
+
+This website is a blog and a video reference for the YouTube and Vimeo videos that I do. If you are interested in just those articles, just search for the tag. 
+
+This is also a blog and outlet where I share other projects that may or may not be related to the Swift language. Just giving you a heads up!
