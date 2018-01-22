@@ -1,1 +1,1 @@
-The code for my blog and reference for videos. 
+The code for my blog and reference for videos, based off of the template Lagrange. 
