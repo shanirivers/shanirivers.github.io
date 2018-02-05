@@ -128,6 +128,8 @@ The bitmask for the green value, 0x00FF00, needs to be moved by 8 places before 
 
 If you want more info on hexadecimals and how to convert them into base 10, just search for tutorials in your favorite search engine as there are tons out there. 
 
+Here's the code on my [Github repository](https://github.com/shanirivers/Interesting-Code-Snippets/blob/master/ConvertHexToUIColor.swift).
+
 Cheers!
 
 Photo credit: 
