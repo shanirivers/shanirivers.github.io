@@ -109,7 +109,7 @@ print("Run time was \(t.seconds) seconds.")
 
 ## Selection Sort
 
-Selection sort is  an in-place comparison sort. It has $$ O(n_{2}) $$ time complexity, so its performs worse, but is simple and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited. Why not just use Swift built-in array method ``` sorted() ```, you might ask, because it's about learning. It is definitely faster too, but this is for understanding and flexing the mental muscle.
+Selection sort is  an in-place comparison sort. It has $$ O(n^2) $$ time complexity, so its performs worse, but is simple and it has performance advantages over more complicated algorithms in certain situations, particularly where auxiliary memory is limited. Why not just use Swift built-in array method ``` sorted() ```, you might ask, because it's about learning. It is definitely faster too, but this is for understanding and flexing the mental muscle.
 
 Basically, the algorithm has to traverse through all the array elements and swap values when it comes across one that is smaller.  
 
