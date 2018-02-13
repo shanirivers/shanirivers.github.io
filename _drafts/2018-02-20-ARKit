@@ -1,1 +1,8 @@
 http://jamesonquave.com/blog/arkit-tutorial-in-swift-4-for-xcode-9-using-scenekit/
+https://developer.apple.com/documentation/arkit/building_your_first_ar_experience
+
+
+Reference this tutorial, but it is super old (+1y): https://www.raywenderlich.com/146436/augmented-reality-ios-tutorial-location-based-2
+A more recent project on ARKit and CoreLocation
+https://github.com/ProjectDent/ARKit-CoreLocation
+
