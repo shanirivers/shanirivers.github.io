@@ -1,0 +1,36 @@
+:root {
+  --bulma-size-1: 6rem;
+  --bulma-size-2: 2.5rem;
+  --bulma-size-3: 2rem;
+  --bulma-size-4: 1.5rem;
+  --bulma-size-5: 1.25rem;
+  --bulma-size-6: 1rem;
+  --bulma-size-7: 0.75rem;
+}
+
+.title,
+.subtitle {
+  --bulma-title-family: false;
+  --bulma-title-size: var(--bulma-size-1);
+  --bulma-title-weight: var(--bulma-weight-extrabold);
+  --bulma-title-line-height: 1.125;
+  --bulma-title-strong-color: inherit;
+  --bulma-title-strong-weight: inherit;
+  --bulma-title-sub-size: 0.75em;
+  --bulma-title-sup-size: 0.75em;
+  --bulma-subtitle-color: var(--bulma-text);
+  --bulma-subtitle-family: false;
+  --bulma-subtitle-size: var(--bulma-size-5);
+  --bulma-subtitle-weight: var(--bulma-weight-normal);
+  --bulma-subtitle-line-height: 1.25;
+  --bulma-subtitle-strong-color: var(--bulma-text-strong);
+  --bulma-subtitle-strong-weight: var(--bulma-weight-semibold);
+}
+
+.section {
+  --bulma-section-padding: 10% 1.5rem;
+  --bulma-section-padding-desktop: 3rem 3rem;
+  --bulma-section-padding-medium: 9rem 4.5rem;
+  --bulma-section-padding-large: 18rem 6rem;
+  padding: var(--bulma-section-padding);
+}
