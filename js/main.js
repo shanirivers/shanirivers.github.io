@@ -1,25 +1,46 @@
-// Menu toggle
+// // Menu toggle
 document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  const $navbarMenu = document.querySelector('.navbar-menu'); 
 
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-  
-        // Get the target from the "data-target" attribute
+  $navbarBurgers.forEach(el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+
+  // Add click event on each menu item
+  const $menuItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-menu .navbar-item'), 0); 
+
+  $menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      $navbarBurgers.forEach(el => {
         const target = el.dataset.target;
         const $target = document.getElementById(target);
-  
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-  
+
+        el.classList.remove('is-active');
+        $target.classList.remove('is-active');
       });
     });
-  
   });
+
+  // Add click event on document
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.navbar-burger') && !event.target.closest('.navbar-menu')) {
+      $navbarBurgers.forEach(el => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        el.classList.remove('is-active');
+        $target.classList.remove('is-active');
+      });
+    }
+  });
+});
 
   // Hero text rotate 
   var TxtRotate = function(el, toRotate, period) {
