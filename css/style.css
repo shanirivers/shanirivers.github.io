@@ -34,6 +34,9 @@
   --bulma-section-padding-large: 18rem 6rem;
   padding: var(--bulma-section-padding);
 }
+#hero {
+  padding-top: 10rem;
+}
 
 #skill_item {
   padding: 30px;
@@ -50,7 +53,7 @@
   /* font-family: 'Raleway', sans-serif; */
   letter-spacing: 1.5px;
   font-size: 1em;
-  color: white;
+  color: black;
   background-color: #00C2F3;
   outline: none;
   cursor: pointer;
