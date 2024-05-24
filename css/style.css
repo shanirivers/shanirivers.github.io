@@ -38,6 +38,7 @@
 #about_img {
   border-radius: 10px;
 }
+
 #link_btn a {
   color: black:
 }
@@ -47,7 +48,7 @@
 }
 
 #hero {
-  padding-top: 10rem;
+  padding: 12rem 0;
 }
 
 #social_item a {
@@ -57,7 +58,8 @@
 
 
 i {
-  font-size: 40px; /* Adjust this value to your preference */
+  font-size: 40px;
+  /* Adjust this value to your preference */
 }
 
 
@@ -78,13 +80,15 @@ i {
     --bulma-title-size: var(--bulma-size-1);
   }
 
-  #full-name, 
+  #full-name,
   #email-address,
   #message {
     width: 75%;
   }
+}
 
-  #about{ 
-    width:85%;
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1200px;
   }
 }
