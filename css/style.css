@@ -34,30 +34,20 @@
   --bulma-section-padding-large: 18rem 6rem;
   padding: var(--bulma-section-padding);
 }
+
+#about_img {
+  border-radius: 10px;
+}
+#link_btn a {
+  color: black:
+}
+
+#logo {
+  padding: 5px;
+}
+
 #hero {
   padding-top: 10rem;
-}
-
-#skill_item {
-  padding: 30px;
-  margin: 10px 10px;
-  background-color: #00C2F3;
-  color: black;
-  border-radius: 10px;
-  text-align: center;
-}
-
-#submit {
-  padding: 10px 15px;
-
-  /* font-family: 'Raleway', sans-serif; */
-  letter-spacing: 1.5px;
-  font-size: 1em;
-  color: black;
-  background-color: #00C2F3;
-  outline: none;
-  cursor: pointer;
-  border-radius: 10px;
 }
 
 #social_item a {
@@ -92,5 +82,9 @@ i {
   #email-address,
   #message {
     width: 75%;
+  }
+
+  #about{ 
+    width:85%;
   }
 }

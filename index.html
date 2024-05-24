@@ -17,7 +17,10 @@
 
   <nav class="navbar container" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://www.shanirivers.com">Shani Rivers-Jose
+      <a class="navbar-item" href="https://www.shanirivers.com"> 
+      <figure id="logo" class="image is-48x48">
+        <img src="/images/Logo_white.png"/>
+      </figure>
       </a>
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -47,9 +50,7 @@
         </a>
       </div>
     </div>
-
   </nav>
-
 
   <section id="hero" class="section">
     <div class="container">
@@ -60,8 +61,8 @@
       <p class="subtitle">
         <br>Let's see what we can build <strong>together!</strong>
       </p>
-      <div class="button">
-        <a href="#about">LET'S CHAT</a>
+      <div class="button is-primary is-medium" id="link_btn">
+        <button onclick="location.href='#contact'">LET'S CHAT</button>
       </div>
     </div>
   </section>
@@ -95,13 +96,13 @@
             <footer class="card-footer">
               <p class="card-footer-item">
                 <span>
-                  <a href="#"
+                  <a href="#" target="_blank"
                     >Preview the App</a
                   >
                 </span>
               </p>
               <p class="card-footer-item">
-                <span><a href="#">See the Code</a> </span>
+                <span><a href="#" target="_blank">See the Code</a> </span>
               </p>
             </footer>
           </div>
@@ -109,9 +110,9 @@
         <div id="project_item" class="column">
           <div class="card">
             <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="image is-4by5">
                 <img
-                  src="https://bulma.io/assets/images/placeholders/1280x960.png"
+                  src="/images/wedding_site.png"
                   alt="Placeholder image"
                 />
               </figure>
@@ -121,24 +122,24 @@
                 
                 <div class="media-content">
                   <p class="title is-4">Wedding Website</p>
-                  <p class="subtitle is-6">HTML, CSS & Javascript</p>
+                  <p class="subtitle is-6">HTML5, CSS3 & Vanilla Javascript</p>
                 </div>
               </div>
           
               <div class="content">
-                One page website built and designed from scratch.  
+                One page website built and designed from scratch for a client. No CSS frameworks, bells or whistles.
               </div>
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
                 <span>
-                  <a href="#"
+                  <a href="https://shanirj-portfolio.gitlab.io/wedding-website/" target="_blank"
                     >Preview the Site</a
                   >
                 </span>
               </p>
               <p class="card-footer-item">
-                <span><a href="#">See the Code</a> </span>
+                <span><a href="https://gitlab.com/shanirj-portfolio/wedding-website" target="_blank">See the Code</a> </span>
               </p>
             </footer>
           </div>
@@ -160,18 +161,23 @@
     <div class="container">
       <h1 class="title is-1">About</h1>
       <div class="columns">
-        <div id="skill_item" class="column">
-          <p>Hi, I'm Shani. 
-            I've made a decade long career out of wrangling data, where most of it was supporting a SaaS product. 
-            <br><br>
-            I am a serial autodidact and the owner of the popular Github repository, The Open Source Mathematics Degree. I also have a YouTube channel about where I share programming language topics that I'm learning or find interesting.
-            <br><br>
-            I build websites, apps and currently obsessed with building my own SaaS. 📚🐍🚀</p>
+        <div class="column is-two-fifths">
+
+          
+
+          <figure class="image">
+            <img id="about_img"
+              src="/images/profile_1.png"
+              alt="Profile picture"
+            />
+          </figure>
         </div>
-        <div id="skill_item" class="column"><figure class="image">
-          <img class="is-square" src="https://bulma.io/assets/images/placeholders/128x128.png" />
-        </figure></div>
-        
+        <div class="column" id="about">
+          <p class="title is-4">From Microbes to SQL to Swift:<br>A self-driven path in tech.</p>
+          <p>Hi, there.<br><br>So I've made a decade long career out of wrangling data, where most of it was spent supporting the backend of a SaaS product. I found myself in IT by taking a couple of database courses for my first corporate job out of college.<br><br>I learned about web development on the fly for work and basic curiousity. I learned my first programming language, Swift, by reading its documentation.<br><br>I am a serial autodidact and love sharing freely available knowledge, hence the somewhat popular Github repository, <a href="https://github.com/shanirivers/open-source-mathematics-degree" target="_blank">Open Source Mathematics Degree</a>.<br><br>
+            I love helping others build their online presence and to inspire others to get into tech. I also have a YouTube channel where I share programming language topics that I'm learning or find interesting, plus a couple of tutorials.
+            <br><br> I'm currently obsessed with building my own SaaS in Python and learning how to teach machines (generative AI).<br><br>📚🐍🚀</p>
+        </div>
       </div>
     </div>
   </section>
@@ -179,6 +185,7 @@
   <section id="contact" class="section">
     <div class="container">
       <h1 class="title is-1">Contact</h1>
+      <p class="title is-6"><br>Reach out if you want to collaborate or just to say hi! 👋</p><br>
       <div class="card is-four-fifths">
         <div class="card-content">
           
@@ -187,34 +194,30 @@
         method="post">
         <label class="label">Name</label>
         <div class="control">
-           <input class="input" id="full-name" type="text" placeholder="NAME" required="">
+           <input class="input" type="text" name="name" id="full-name" placeholder="Your name, pretty please." required="">
+           
         </div>
 
         <label class="label">Email</label>
         <div class="control">
-          <input class="input" id="email-address" type="email" name="_replyto" placeholder="E-MAIL" required="">
+          <input class="input" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
         </div>
 
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label">Message
           <div class="control">
-
-            <textarea class="input" rows="10" id="message" type="text" placeholder="MESSAGE" required=""></textarea>
+            <textarea class="input  rows="5" name="message" id="message" placeholder="Your message goes here... just stating the obvious." required=""></textarea>
+          </label>
 
           </div>
         </div>
-
-        <div class="field">
-          <div class="control">
-
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-
-            <input id="submit" type="submit" value="SEND!">
-
-          </div>
+      <div class="field">
+        <div class="control button is-primary is-medium">
+      
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          <button  id="submit" type="submit">SEND!</button>
         </div>
-
-       
+      </div>
       </form>
     </div>
         
@@ -224,13 +227,18 @@
   <footer class="footer">
     <div class="container">
     <div class="content has-text-centered socialmenu">
-      <h5>The Socials</h5>
       <div class="columns">
         <div id="social_item" class="column"><a href="https://twitter.com/shani_codes" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></div>
         <div id="social_item" class="column"><a href="https://www.youtube.com/@shanicodes" target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
         <div id="social_item" class="column"><a href="https://github.com/shanirivers" target="_blank"><i class="fa-brands fa-square-github"></i></a></div>
         <div id="social_item" class="column"><a href="https://gitlab.com/shanirj-portfolio" target="_blank"><i class="fa-brands fa-square-gitlab"></i></a></div>
+        <div id="social_item" class="column"><a href="https://www.linkedin.com/in/shanirivers/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
       </div>
+      <div><p>&copy;
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script> Shani Rivers-Jose.
+      </p></div>
     </div>
   </footer>
 </body>
