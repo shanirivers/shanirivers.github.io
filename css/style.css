@@ -6,6 +6,8 @@
   --bulma-size-5: 1.25rem;
   --bulma-size-6: 1rem;
   --bulma-size-7: 0.75rem;
+  --bulma-link-text: #8A4FFF;
+  /* hsl(var(--bulma-link-h), var(--bulma-link-s), var(--bulma-link-on-scheme-l)); */
 }
 
 .title,
