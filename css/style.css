@@ -49,9 +49,9 @@
   padding: 5px;
 }
 
-#hero {
+/* #hero {
   padding: 12rem 0;
-}
+} */
 
 #social_item a {
   padding: 20px;
@@ -70,16 +70,19 @@ i {
   .title,
   .subtitle {
     --bulma-title-family: false;
-    --bulma-title-size: var(--bulma-size-3);
+    /* --bulma-title-size: var(--bulma-size-3); */
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .title.is-1 {
+    font-size: 5rem;
+  }
 
   .title,
   .subtitle {
     --bulma-title-family: false;
-    --bulma-title-size: var(--bulma-size-1);
+    /* --bulma-title-size: var(--bulma-size-1); */
   }
 
   #full-name,
