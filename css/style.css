@@ -28,6 +28,15 @@
   --bulma-subtitle-strong-color: var(--bulma-text-strong);
   --bulma-subtitle-strong-weight: var(--bulma-weight-semibold);
 }
+#projects .subtitle {
+  padding-top: 0.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#projects .content {
+  padding-top: 0.5em;
+}
 
 .section {
   --bulma-section-padding: 4rem 1.5rem;
