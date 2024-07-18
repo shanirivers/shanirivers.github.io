@@ -38,6 +38,10 @@
   padding-top: 0.5em;
 }
 
+a {
+  color: var(--bulma-primary);
+}
+
 .section {
   --bulma-section-padding: 4rem 1.5rem;
   --bulma-section-padding-desktop: 3rem 3rem;
@@ -58,10 +62,6 @@
   padding: 5px;
 }
 
-/* #hero {
-  padding: 12rem 0;
-} */
-
 #social_item a {
   padding: 20px;
   text-align: justify;
@@ -81,9 +81,16 @@ i {
     --bulma-title-family: false;
     /* --bulma-title-size: var(--bulma-size-3); */
   }
+  
 }
 
 @media screen and (min-width: 1024px) {
+
+
+#hero {
+  padding: 12rem 0;
+}
+
   .title.is-1 {
     font-size: 5rem;
   }
