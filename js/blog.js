@@ -53,7 +53,7 @@ fetch('https://gql.hashnode.com', {
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a href="${post.node.url}" target="_blank">Read more</a>
+                <a href="${post.node.url}" target="_blank" aria-label="To finish reading this blog post">Read More...</a>
               </span>
             </p>
           </footer>
