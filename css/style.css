@@ -28,6 +28,12 @@
   --bulma-subtitle-strong-color: var(--bulma-text-strong);
   --bulma-subtitle-strong-weight: var(--bulma-weight-semibold);
 }
+
+.title:not(.is-spaced):has(+ .subtitle) {
+  margin-bottom: 10px;
+  height: 240px;
+}
+
 #projects .subtitle {
   padding-top: 0.5em;
   font-weight: bold;
@@ -75,20 +81,30 @@ i {
 
 
 @media screen and (max-width: 768px) {
-
   .title,
   .subtitle {
     --bulma-title-family: false;
     /* --bulma-title-size: var(--bulma-size-3); */
   }
-  
+}
+
+@media screen and (max-width: 810px) {
+  .title:not(.is-spaced):has(+ .subtitle) {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .title:not(.is-spaced):has(+ .subtitle) {
+    height: 250px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
 
 
 #hero {
-  padding: 15rem 0;
+  padding: 7rem 0;
 }
 
   .title.is-1 {
