@@ -29,9 +29,9 @@
   --bulma-subtitle-strong-weight: var(--bulma-weight-semibold);
 }
 
-.title:not(.is-spaced):has(+ .subtitle) {
+.span_carousel {
   margin-bottom: 10px;
-  height: 240px;
+  height: 200px;
 }
 
 #projects .subtitle {
@@ -44,9 +44,17 @@
   padding-top: 0.5em;
 }
 
-a {
-  color: var(--bulma-primary);
+.project_link {
+  padding: 0.9rem;
 }
+
+.card-footer-item {
+  background: white;
+}
+
+/* a {
+  color: var(--bulma-primary);
+} */
 
 .section {
   --bulma-section-padding: 4rem 1.5rem;
@@ -89,14 +97,14 @@ i {
 }
 
 @media screen and (max-width: 810px) {
-  .title:not(.is-spaced):has(+ .subtitle) {
-    height: 150px;
+  .span_carousel {
+    height: 100px;
   }
 }
 
 @media screen and (max-width: 428px) {
-  .title:not(.is-spaced):has(+ .subtitle) {
-    height: 250px;
+  .span_carousel {
+    height: 200px;
   }
 }
 
