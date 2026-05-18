@@ -1,101 +1,137 @@
-// // Menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  const $navbarMenu = document.querySelector('.navbar-menu'); 
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  $navbarBurgers.forEach(el => {
-    el.addEventListener('click', () => {
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
+/* ---- nav: solid shadow once scrolled ---- */
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
 
-      el.classList.toggle('is-active');
-      $target.classList.toggle('is-active');
-    });
+/* ---- hamburger: identical state whether at top or scrolled ---- */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+function closeMenu(){
+  burger.classList.remove('open');
+  navLinks.classList.remove('show');
+  document.body.classList.remove('menu-open');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('open');
+  navLinks.classList.toggle('show', open);
+  document.body.classList.toggle('menu-open', open);
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+/* close when any link is clicked */
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+/* close on Escape */
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeMenu(); });
+
+/* ---- scroll reveal ---- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
   });
+}, {threshold:.12, rootMargin:"0px 0px -8% 0px"});
+document.querySelectorAll('.reveal').forEach((el,i) => {
+  el.style.transitionDelay = (i % 4) * 70 + 'ms';
+  io.observe(el);
+});
 
-  // Add click event on each menu item
-  const $menuItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-menu .navbar-item'), 0); 
-
-  $menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-      $navbarBurgers.forEach(el => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        el.classList.remove('is-active');
-        $target.classList.remove('is-active');
-      });
-    });
-  });
-
-  // Add click event on document
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.navbar-burger') && !event.target.closest('.navbar-menu')) {
-      $navbarBurgers.forEach(el => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        el.classList.remove('is-active');
-        $target.classList.remove('is-active');
-      });
-    }
+/* ---- project expand/collapse ---- */
+document.querySelectorAll('.proj-head').forEach(head => {
+  head.addEventListener('click', () => {
+    const proj = head.closest('.proj');
+    const body = proj.querySelector('.proj-body');
+    const open = proj.classList.toggle('open');
+    head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0px';
   });
 });
 
-  // Hero text rotate 
-  var TxtRotate = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-  };
-  
-  TxtRotate.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-  
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-  
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-  
-    var that = this;
-    var delta = 300 - Math.random() * 100;
-  
-    if (this.isDeleting) { delta /= 2; }
-  
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
-  
-    setTimeout(function() {
-      that.tick();
-    }, delta);
-  };
-  
-  window.onload = function() {
-    var elements = document.getElementsByClassName('txt-rotate');
-    for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-rotate');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+/* ---- project filter ---- */
+const fBtns = document.querySelectorAll('.filters button');
+const projs = document.querySelectorAll('.proj');
+fBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    fBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    projs.forEach(p => {
+      const cats = p.dataset.cat.split(' ');
+      const show = (f === 'all') || cats.includes(f);
+      p.classList.toggle('hide', !show);
+      if(!show && p.classList.contains('open')){
+        p.classList.remove('open');
+        p.querySelector('.proj-body').style.maxHeight = '0px';
+        p.querySelector('.proj-head').setAttribute('aria-expanded','false');
       }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    document.body.appendChild(css);
-  };
+    });
+  });
+});
+
+/* keep open panels correctly sized on resize */
+window.addEventListener('resize', () => {
+  document.querySelectorAll('.proj.open .proj-body').forEach(b => {
+    b.style.maxHeight = b.scrollHeight + 'px';
+  });
+});
+
+/* ---- in their words: auto-rotating slider with manual controls ---- */
+(function(){
+  const track = document.getElementById('wordsTrack');
+  if(!track) return;
+  const slider = document.getElementById('wordsSlider');
+  const slides = track.children.length;
+  const dots = document.getElementById('wordsDots');
+  const ROTATE_MS = 6000;
+  let i = 0, timer = null, hovering = false;
+
+  for(let d=0; d<slides; d++){
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Go to quote ' + (d+1));
+    if(d===0) b.classList.add('active');
+    b.addEventListener('click', () => { go(d); restart(); });
+    dots.appendChild(b);
+  }
+  const dotEls = dots.children;
+
+  function go(n){
+    i = (n + slides) % slides;
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    for(let k=0;k<dotEls.length;k++) dotEls[k].classList.toggle('active', k===i);
+  }
+
+  function start(){
+    if(timer || slides < 2) return;
+    timer = setInterval(() => { if(!hovering) go(i+1); }, ROTATE_MS);
+  }
+  function stop(){ clearInterval(timer); timer = null; }
+  /* manual action: reset the clock so it doesn't jump right after */
+  function restart(){ stop(); start(); }
+
+  document.getElementById('wordsPrev').addEventListener('click', () => { go(i-1); restart(); });
+  document.getElementById('wordsNext').addEventListener('click', () => { go(i+1); restart(); });
+
+  /* pause while the pointer is over the slider */
+  slider.addEventListener('mouseenter', () => { hovering = true; });
+  slider.addEventListener('mouseleave', () => { hovering = false; });
+
+  /* keyboard arrows when the slider is in view */
+  document.addEventListener('keydown', e => {
+    const r = slider.getBoundingClientRect();
+    const visible = r.top < window.innerHeight && r.bottom > 0;
+    if(!visible) return;
+    if(e.key === 'ArrowLeft'){ go(i-1); restart(); }
+    if(e.key === 'ArrowRight'){ go(i+1); restart(); }
+  });
+
+  /* only rotate while the section is actually on screen, and
+     respect reduced-motion preferences */
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting ? start() : stop());
+    }, {threshold:.25});
+    io.observe(slider);
+  }
+})();

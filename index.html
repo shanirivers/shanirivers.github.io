@@ -10,15 +10,15 @@
 
   <!-- Primary Meta Tags -->
   <title>Shani Rivers — Data & Web Dev 👩‍💻</title>
-  <meta name="title" content="Shani Rivers-Jose — Data, SaaS, AI & Web Dev" />
-  <meta name="description" content="Just a seasoned professional with over a decade of experience in analysis, data management, SQL and SaaS support. Explore my journey of all things data,self-taught programming and a bit of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub or Gitlab. Let's learn, build, and inspire together.
+  <meta name="title" content="Shani Rivers — Data, SaaS, AI & Web" />
+  <meta name="description" content="Just a data professional that cleans and manages data to uncover the story contained within it... from spreadsheets to CSVs to scraping PDFs, digging into Parchet files or databases to supporting SaaS applications. Explore my journey of all things data, Python, self-taught programming and a sprinkle of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub. Let's learn, build, and inspire each other.
   " />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.shanirivers.com/" />
-  <meta property="og:title" content="Shani Rivers-Jose — Data & Web Dev" />
-  <meta property="og:description" content="Just a seasoned professional with over a decade of experience in analysis, data management, SQL and SaaS support. Explore my journey of all things data,self-taught programming and a bit of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub or Gitlab. Let's learn, build, and inspire together.
+  <meta property="og:title" content="Shani Rivers — Data, SaaS, AI & Web" />
+  <meta property="og:description" content="Just a data professional that cleans and manages data to uncover the story contained within it... from spreadsheets to CSVs to scraping PDFs, digging into Parchet files or databases to supporting SaaS applications. Explore my journey of all things data, Python, self-taught programming and a sprinkle of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub. Let's learn, build, and inspire each other.
   " />
   <meta property="og:image"
     content="  https://raw.githubusercontent.com/shanirivers/shanirivers.github.io/main/images/metaimage.png" />
@@ -26,433 +26,354 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.shanirivers.com" />
-  <meta property="twitter:title" content="Shani Rivers-Jose — Data & Web Dev" />
+  <meta property="twitter:title" content="Shani Rivers-Jose — Data Storytelling" />
   <meta property="twitter:description"
-    content="Just a seasoned professional with over a decade of experience in analysis, data management, SQL and SaaS support. Explore my journey of all things data,self-taught programming and a bit of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub or Gitlab. Let's learn, build, and inspire together." />
+    content="Just a data professional that cleans and manages data to uncover the story contained within it... from spreadsheets to CSVs to scraping PDFs, digging into Parchet files or databases to supporting SaaS applications. Explore my journey of all things data, Python, self-taught programming and a sprinkle of web development. Discover tutorials and topics on my YouTube channel, blog or follow my current projects on GitHub. Let's learn, build, and inspire each other." />
   <meta property="twitter:image"
     content="  https://raw.githubusercontent.com/shanirivers/shanirivers.github.io/main/images/metaimage.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" async>
+    
+   <!-- {{/*  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" async>  */}} -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet"" rel="stylesheet">
+
+  <!-- Font Awesome 6 (free). Swap kit/version if you have your own. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <nav class="navbar container" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://www.shanirivers.com">
-        <figure id="logo" class="image is-48x48">
-          <img src="/images/Logo_lavendar.png" alt="logo" />
-        </figure>
-      </a>
+<body id="top">
+  <!-- ===================== NAV ===================== -->
+<nav id="nav">
+  <a href="#top" class="mark">Shani Rivers</a>
 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#services">Capabilities</a>
+    <a href="#words">Words</a>
+    <a href="#writing">Writing</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <a href="#hero" class="navbar-item" aria-label="home">
-          Home
-        </a>
-        <a href="#projects" class="navbar-item" aria-label="projects">
-          Projects
-        </a>
-        <a href="#blog" class="navbar-item" aria-label="blog">
-          Blog
-        </a>
-        <a href="#reviews" class="navbar-item" aria-label="reviews">
-          Reviews
-        </a>
-        <a href="#about" class="navbar-item" aria-label="about">
-          About
-        </a>
-        <a href="#contact" class="navbar-item" aria-label="contact">
-          Contact
-        </a>
-      </div>
-    </div>
-  </nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <section id="hero" class="section hero">
-    <div class="container">
-      <h1 id="hero_title" class="title is-1">
-        Hi, I'm Shani<br>
-        <div class="span_carousel">
-          <span class="txt-rotate" data-period="700"
-            data-rotate='[ "& I create captivating websites.", "& I produce engaging content.", "& I utilize advanced SQL.", "& I apply analytical expertise.", "& I deliver business intelligence.", "& I like coding.", "& I wrangle data with Python." ]'></span>
-        </div>
-      </h1>
-      <p class="subtitle">
-        <br>Let's see what we can build <strong>together!</strong>
-      </p>
-      <div class="button is-primary is-medium" id="link_btn">
-        <button onclick="location.href='#contact'"><b>LET'S CHAT</b></button>
-      </div>
-    </div>
-  </section>
+<!-- ===================== HERO ===================== -->
+<header class="hero wrap">
+  <div class="eyebrow reveal">Data &middot; Engineering &middot; Storytelling</div>
+  <h1 class="reveal">I build <em>data products</em> and share the stories around them.</h1>
+  <p class="lede reveal">Data analyst and developer working across data analytics, micro-SaaS, and narrative. I care about making data actually useful to the person on the other end.</p>
+  <div class="scrollcue">Scroll</div>
+</header>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="title is-2">Projects</h2>
+<div class="wrap"><div class="divider"></div></div>
 
-      <div id="projectsContainer" class="columns">
-        <div id="project_item" class="column is-half">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="/images/mockup_wedding.png" alt="Placeholder image" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
+<!-- ===================== WORK ===================== -->
+<section id="work" class="wrap">
+  <div class="section-head reveal">
+    <span class="num">00.</span><h2>Selected Work</h2>
+  </div>
 
-                <div class="media-content">
-                  <p class="title is-4">Custom Website Build</p>
-                  <p class="subtitle is-7">HTML5 CSS3 Javascript Git CI/CD</p>
-                </div>
-              </div>
+  <div class="filters reveal">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="product">Products</button>
+    <button data-filter="data">Data &amp; Engineering</button>
+    <button data-filter="story">Storytelling</button>
+  </div>
 
-              <div class="content">
-                Created a modern, one-page wedding website from scratch, tailored to my client's unique vision. This
-                project showcases my skills in web design and development without relying on CSS frameworks or
-                unnecessary features.
-              </div>
-            </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span>
-                  <a class="project_link" href="https://shanirj-portfolio.gitlab.io/wedding-website/" target="_blank"
-                    aria-label="To preview this project site">Preview the Site</a>
-                </span>
-              </p>
-              <p class="card-footer-item">
-                <span><a class="project_link" href="https://gitlab.com/shanirj-portfolio/wedding-website"
-                    target="_blank" aria-label="To view the code used to create the project">See the Code</a>
-                </span>
-              </p>
-            </footer>
+  <div class="proj-list reveal">
+
+    <!-- PinkPhi.ai -->
+    <article class="proj" data-cat="product">
+      <button class="proj-head" aria-expanded="false">
+        <span class="ttl">PinkPhi.ai <span class="tag">Micro-SaaS</span></span>
+        <span class="ico" aria-hidden="true"></span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <p>An AI-powered content calendar that repurposes long-form work into platform-specific social posts. Built and shipped end to end as a bring-your-own-API-key product: authentication, payments, and deployment all owned solo across a public two-week launch.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Pydantic</span><span>Whisper API</span><span>Streamlit</span>
+            <span>Auth0</span><span>Stripe</span><span>Render</span><span>Google Cloud</span>
+            <span>Astral uv</span><span>CI/CD</span>
           </div>
-        </div>
-        <div id="project_item" class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="/images/chois_tkd.png" alt="Martial arts studio mockup" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-
-                <div class="media-content">
-                  <p class="title is-4">Small Business Website</p>
-                  <p class="subtitle is-7">HTML5 CSS3 Javascript Git CI/CD</p>
-                </div>
-              </div>
-
-              <div class="content">
-                Customized an HTML template for a local small business, demonstrating web design and development skills.
-                Seamlessly integrated with a pre-existing domain provider and deployed on GitLab.
-              </div>
-            </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span>
-                  <a class="project_link" href="https://chois-taekwondo.gitlab.io/landing-page/" target="_blank"
-                    aria-label="To preview this project site">Preview the site</a>
-                </span>
-              </p>
-              <p class="card-footer-item">
-                <span><a class="project_link" href="https://gitlab.com/chois-taekwondo/landing-page" target="_blank"
-                    aria-label="To view the code used to create the project">See the Code</a> </span>
-              </p>
-            </footer>
+          <div class="proj-links">
+            <a href="https://pinkphi.ai" target="_blank" rel="noopener">Visit site</a>
+            <!--<a href="https://pinkphi.com" target="_blank" rel="noopener">PinkPhi Analytics</a>-->
           </div>
         </div>
       </div>
-      <div id="projectsContainer" class="columns">
-        <div id="project_item" class="column is-half">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="/images/data_science.png" alt="Image with data science project title" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">Exploring Data Science</p>
-                  <p class="subtitle is-7">python jupyter notebook</p>
-                </div>
-              </div>
+    </article>
 
-              <div class="content">
-                From SaaS implementation and data management to mastering data science and machine learning.
-                Self-directed and select practice projects showcasing growing skillset in this exciting field.
-              </div>
-            </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span><a class="project_link" href="https://github.com/shanirivers/Data-Science-Projects/tree/main"
-                    target="_blank" aria-label="To view the code used to create the project">See the
-                    Code for this project.</a></span>
-              </p>
-            </footer>
+    <!-- Stock Research & Trade Journal -->
+    <article class="proj" data-cat="data product">
+      <button class="proj-head" aria-expanded="false">
+        <span class="ttl">Stock Research &amp; Trade Journal <span class="tag">Data App</span></span>
+        <span class="ico" aria-hidden="true"></span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <p>A work-in-progress trade-journaling application built on the SimFin API, grounded in volume-analysis and relative-strength frameworks. Designed for disciplined position and swing tracking with reproducible data ingestion.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Pyspark</span><span>Parchet</span>
+            <span>SimFin API</span><span>pandas</span><span>NumPy</span>
+            <span>PySpark</span><span>Streamlit</span>
           </div>
-        </div>
-        <div id="project_item" class="column">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image">
-                <img src="/images/mockup_sql.png" alt="Mockup image of SQL Playground App" />
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">The SQL Playground App</p>
-                  <p class="subtitle is-7">Python SQLite HTML5 CSS3 Git</p>
-                </div>
-              </div>
-
-              <div class="content">
-                Explore my interactive web app. This project demonstrates my ability to set up and manage a real
-                database, integrating backend data processing, table and JSON output options with a user-friendly
-                interface.
-              </div>
-            </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span>
-                  <a class="project_link" href="https://shanirivers-sql-playground-app-tq4vmt.streamlit.app"
-                    target="_blank" aria-label="To preview the site for this project">Preview the Site</a>
-                </span>
-              </p>
-              <p class="card-footer-item">
-                <span><a class="project_link" href="https://github.com/shanirivers/SQL-Playground" target="_blank"
-                    aria-label="To view the code used to create the project">See the Code</a> </span>
-              </p>
-            </footer>
+          <div class="proj-links">
+            <a href="https://colab.research.google.com/drive/1XPBiMKrI3UNxjUJO_NuvJm9cq7KVIgQA?usp=sharing" target="_blank" rel="noopener">Details</a>
           </div>
         </div>
       </div>
+    </article>
 
-    </div>
-    </div>
-  </section>
-
-  <section id="blog" class="section">
-    <div class="container">
-      <h2 class="title is-2">Blog</h2>
-      <div id="postsContainer" class="columns">
-        <!-- This is programmatically filled by the blog.js code -->
-      </div>
-    </div>
-  </section>
-
-  <section id="reviews" class="section">
-    <div class="container">
-      <h2 class="title is-2">Reviews</h2>
-      <div class="columns">
-        <div class="column is-6"> <!--Amy's review-->
-          <div class="p-6 box has-background-white">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <!--<div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar2.png" alt="" data-config-id="img-e9358d-4">
-                </div>-->
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-3">Amy White</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-11">Owner, Moss & Heart Montessori</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-12">Working with Shani was a
-              wonderful experience. She is clearly an expert in the field - she can quickly assess what is or isn't
-              working in a website, which was a true time saver on my side. She easily found what was missing, and
-              pointed out simple changes that would improve my site's overall impact on my target audience. I highly
-              recommend Shani based on her expertise, clear communication, and warm personality. I'm so glad I connected
-              with Shani, because I now know, with confidence, who I can turn to.</p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-13">Website Consulting</p>
+    <!-- CGM Analytics -->
+    <article class="proj" data-cat="data">
+      <button class="proj-head" aria-expanded="false">
+        <span class="ttl">CGM Analytics <span class="tag">Data Engineering</span></span>
+        <span class="ico" aria-hidden="true"></span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <p>A phased continuous-glucose-monitoring toolkit for folks with Type 1 diabetes (T1D). 
+            <br>Phase one delivers descriptive dashboards and clinical metrics; later phases build toward pattern discovery and predictive modeling. The guiding principle: Help one person well before scaling.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>pandas</span><span>NumPy</span><span>PDFPlumber</span><span>Plotly</span><span>PySpark</span><span>Streamlit</span><span>ETL</span>
+            <span>Data pipelines</span>
           </div>
-        </div>
-        <div class="column is-6"> <!--Terry's review-->
-          <div class="p-6 box has-background-white">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <!--<div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar.png" alt="" data-config-id="img-e9358d-3">
-                </div>-->
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-2">Terry L.</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-8">Programming Student</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-9">Learning with Shani was great. She was able to explain the basics and how I can use the tool. I now know enough that I want to move forward with not just my project, but with programming in general.  Thank you for giving me that spark!</p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-10">Python Tutoring</p>
+          <div class="proj-links">
+            <a href="https://colab.research.google.com/drive/1INUe951H9Ewz02rz2z5pT0g_mK_a2tYM?usp=sharing" target="_blank" rel="noopener">Case study - Reach out if you want access</a>
           </div>
-        </div>
-        
-        <!-- <div class="column is-4">
-          <div class="p-6 box has-background-white">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar3.png" alt="" data-config-id="img-e9358d-5">
-                </div>
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-4">Bessie Cooper</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-14">@brooklysim</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-15">We have built a few web apps using Flaro. It saves us a lot of time, because we don't have to build design features from scratch.
-            </p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-16">3 days ago</p>
-          </div>
-        </div> -->
-      </div>
-      <!--<div class="columns">
-        <div class="column is-4">
-          <div class="p-6 box has-background-white" style="border-radius: 30px;">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar4.png" alt="" data-config-id="img-e9358d-6">
-                </div>
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-5">Esther Howard</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-17">@brooklysim</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-18">Wrike is great to make
-              work visible and collaborative. People can pass tasks off as they complete their parts, allowing you to
-              see the flow of work.</p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-19">3 days ago</p>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="p-6 box has-background-white" style="border-radius: 30px;">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar5.png" alt="" data-config-id="img-e9358d-7">
-                </div>
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-6">Albert Flores</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-20">@brooklysim</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-21">Ease of use and
-              efficiency of design tools. The ability for the integrated marketing team to see all aspects of a project.
-            </p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-22">3 days ago</p>
-          </div>
-        </div>
-        <div class="column is-4">
-          <div class="p-6 box has-background-white" style="border-radius: 30px;">
-            <div class="is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100%;">
-              <div class="is-flex is-flex-wrap-wrap mb-4 -m-2">
-                <div class="p-2">
-                  <img src="flaro-assets/images/testimonials/avatar6.png" alt="" data-config-id="img-e9358d-8">
-                </div>
-                <div class="p-2">
-                  <h3 class="has-text-weight-semibold has-text-dark" data-config-id="txt-e9358d-7">Jerome Bell</h3>
-                  <p class="has-text-grey" data-config-id="txt-e9358d-23">@brooklysim</p>
-                </div>
-              </div>
-            </div>
-            <p class="has-text-weight-medium has-text-dark mb-4" data-config-id="txt-e9358d-24">Very very easy for
-              customer information to get secured if all orders are on one device.</p>
-            <p class="has-text-grey has-text-weight-medium" data-config-id="txt-e9358d-25">3 days ago</p>
-          </div>
-        </div>
-      </div>-->
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="title is-2">About</h2>
-      <div class="columns">
-        <div class="column is-two-fifths">
-          <figure class="image">
-            <img id="about_img" src="/images/profile_1.png" alt="Profile picture" />
-          </figure>
-        </div>
-        <div class="column" id="about">
-          <p class="title is-4">From Microbes to SQL to Swift:<br>A self-driven path in tech.</p>
-          <p>Hi, there.<br><br>So I've made a decade long career out of wrangling and analysing data, where most of it
-            was spent supporting a SaaS product. I found myself in this field by taking a couple of database courses for
-            my first corporate job out of college.<br><br>I learned about web development on the fly for work and basic
-            curiousity. I learned my first programming language, Swift, and the second one, Python, by reading their
-            documentation.<br><br>I am a serial autodidact and love sharing freely available knowledge, hence the
-            somewhat popular Github repository, <a href="https://github.com/shanirivers/open-source-mathematics-degree"
-              target="_blank">Open Source Mathematics Degree</a>.<br><br>
-            I love helping others build their online presence and to inspire others. I also have a YouTube channel where
-            I share tutorials and other topics that I'm learning or find interesting, plus a couple of courses on
-            Gumroad and designed coding journals.
-            <br><br> I'm currently obsessed with data science, machine learning and analyzing all the things with
-            Python.<br><br>
-            My goal is to continue to grow as a data-driven problem solver and to inspire others to learn and share
-            their knowledge. I'm excited to bring my unique blend of expertise to your next project.
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </article>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="title is-2">Contact</h2>
-      <p class="title is-6"><br>Reach out if you want to collaborate or just to say hi! 👋</p><br>
-      <div class="card is-four-fifths">
-        <div class="card-content">
-
-
-          <form class="form" id="form" name="simple-contact-form" accept-charset="utf-8"
-            action="https://formspree.io/f/mwkgpqqn" method="post">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" name="name" id="full-name" placeholder="Your name, pretty please."
-                required="">
-
-            </div>
-
-            <label class="label">Email</label>
-            <div class="control">
-              <input class="input" type="email" name="_replyto" id="email-address" placeholder="email@domain.tld"
-                required="">
-            </div>
-
-            <div class="field">
-              <label class="label">Message
-                <div class="control">
-                  <textarea class="input  rows=" 5" name="message" id="message"
-                    placeholder="Your message goes here... just stating the obvious." required=""></textarea>
-              </label>
-
-            </div>
-        </div>
-        <div class="field">
-          <div class="control button is-primary is-large">
-
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-            <button id="submit" type="submit"><b>SEND!</b></button>
+    <!-- Kin & Kith Productions -->
+    <article class="proj" data-cat="story">
+      <button class="proj-head" aria-expanded="false">
+        <span class="ttl">Kin &amp; Kith Productions <span class="tag">Storytelling</span></span>
+        <span class="ico" aria-hidden="true"></span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <p>Recorded interviews that preserve the stories that matter, for families holding on to memory and founders documenting the journey. A storytelling practice with structured sessions and a defined offering.</p>
+          <div class="proj-stack">
+            <span>Interview production</span><span>Narrative design</span>
+            <span>Audio</span><span>Brand &amp; web</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://kinandkith.studio" target="_blank" rel="noopener">Visit studio</a>
           </div>
         </div>
-        </form>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="wrap">
+  <div class="section-head reveal">
+    <span class="num">01.</span><h2>Capabilities</h2>
+  </div>
+
+  <p class="svc-intro reveal">I turn data into clear, usable insight. The goal is straightforward: better decisions, stronger results, less waste.</p>
+  <p class="svc-intro sub reveal">My work spans data engineering, analysis, and the tools that make both reliable. The approach is hands-on, and I take responsibility from start to finish.</p>
+
+  <div class="svc-grid reveal">
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-diagram-project"></i></div>
+      <h3>Data engineering<span class="dot">.</span></h3>
+      <p>I design and build the pipelines that move and shape data: ETL and ELT processes, staged migrations, and validation that keeps datasets trustworthy at scale.</p>
+      <div class="tools"><b>Tools</b>Python (pandas, NumPy, PySpark), SQL, SQLite, ETL/ELT, CI/CD</div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-chart-line"></i></div>
+      <h3>Data analysis<span class="dot">.</span></h3>
+      <p>I turn large datasets into actionable answers, then translate the results into clear visuals and plain language for both technical and non-technical stakeholders.</p>
+      <div class="tools"><b>Tools</b>SQL, Python, pandas, Plotly, Matplotlib</div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-code"></i></div>
+      <h3>Programming<span class="dot">.</span></h3>
+      <p>I write high-quality, production-ready code with clear structure and efficiency, using Git for version control and disciplined development standards.</p>
+      <div class="tools"><b>Tools</b>Python, SQL, Git, GitLab</div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-gauge-high"></i></div>
+      <h3>Dashboards<span class="dot">.</span></h3>
+      <p>I build dashboards to monitor results and surface reports, giving people an interactive way to explore trends and patterns on their own.</p>
+      <div class="tools"><b>Tools</b>Streamlit, Python, SQL</div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-list-check"></i></div>
+      <h3>Project delivery<span class="dot">.</span></h3>
+      <p>I break complex problems into smaller, defined pieces of work and shape requirements with stakeholders to keep delivery moving.</p>
+      <div class="tools"><b>Keywords</b>Agile, Scrum, Jira, Confluence</div>
+    </div>
+
+    <div class="svc reveal">
+      <div class="svc-ico"><i class="fa-solid fa-laptop-code"></i></div>
+      <h3>Front-end web<span class="dot">.</span></h3>
+      <p>I design and build responsive websites for founders and freelancers, working across desktop and mobile with clean deployment.</p>
+      <div class="tools"><b>Tools</b>HTML, CSS, JavaScript, CI/CD, Render</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== IN THEIR WORDS ===================== -->
+<section id="words" class="wrap">
+  <div class="section-head reveal">
+    <span class="num">02.</span><h2>In Their Words</h2>
+  </div>
+
+  <div class="words-slider reveal" id="wordsSlider">
+    <div class="words-track" id="wordsTrack">
+
+      <!-- Replace text + names with real quotes when you have them -->
+      <div class="words-slide">
+        <p class="words-q">We've collaborated on ideas and side projects that she brought to life. She's designed and built websites for gorgeous lifestyle content and fine-tuned an endless list of automations. She's clever, thoughtful, and doesn't bring ego to the table at all. I would recommend Shani for any tech role that she can immerse herself into, reverse engineer and you'll love the results!</p>
+        <div class="words-by"><b>Mandy S.</b>Brand Strategist</div>
+      </div>
+
+      <div class="words-slide">
+        <p class="words-q">Her knowledge of navigating a SQL database, understanding the structure and ability to query data was very helpful. Shani is willing to take on challenges outside of her current skill set or job duties to ensure deadlines are met. Given the chance, I would gladly work with Shani again.</p>
+        <div class="words-by"><b>Gregory J.</b>Technical Project Manager</div>
+      </div>
+
+      <div class="words-slide">
+        <p class="words-q">Shani is a proactive and tireless contributor who would make a great addition to any team. I have seen many examples of her talent and have long been impressed by her diligence and work ethic. It's been a real pleasure working with Shani.</p>
+        <div class="words-by"><b>Kelly S.</b>Vice President</div>
+      </div>
+
+      <div class="words-slide">
+        <p class="words-q">She is clearly an expert in the field - she easily found what was missing, and pointed out simple changes that would improve my site's overall impact on my target audience. I highly recommend Shani based on her expertise, clear communication, and warm personality. I'm so glad I connected with her, because I now know, with confidence, who I can turn to.</p>
+        <div class="words-by"><b>Amy W.</b>Owner, Moss & Heart Montessori</div>
+      </div>
+
+      <div class="words-slide">
+        <p class="words-q">She was able to explain the basics and how I can use the tool. I now know enough that I want to move forward with not just my project, but with programming in general. Thank you for giving me that spark!</p>
+        <div class="words-by"><b>Terry L.</b>Programmer, Python mentee</div>
       </div>
 
     </div>
+
+    <div class="words-ctrl">
+      <button class="words-arrow" id="wordsPrev" aria-label="Previous">&larr;</button>
+      <div class="words-dots" id="wordsDots" role="tablist"></div>
+      <button class="words-arrow" id="wordsNext" aria-label="Next">&rarr;</button>
     </div>
-  </section>
-  <footer class="footer">
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== WRITING ===================== -->
+<section id="writing" class="wrap">
+  <div class="section-head reveal">
+    <span class="num">03.</span><h2>Writing</h2>
+  </div>
+  <div class="writing-list reveal">
+    <a class="row" href="https://shanirivers.hashnode.dev/deploy-your-streamlit-app-to-render-a-complete-guide-for-pip-and-uv-users" target="_blank" rel="noopener">
+      <span class="t">Deploy Your Streamlit App to Render: A Complete Guide for pip & Astral uv</span>
+      <span class="c">Hashnode</span>
+    </a>
+    <a class="row" href="https://shanirivers.hashnode.dev/how-to-add-stripe-payments-to-your-streamlit-app-with-st-paywall" target="_blank" rel="noopener">
+      <span class="t">How to Add Stripe Payments to Your Streamlit App with st-paywall</span>
+      <span class="c">Hashnode</span>
+    </a>
+    <a class="row" href="https://shanirivers.hashnode.dev/from-marketing-webinars-to-a-micro-saas-the-tool-is-live" target="_blank" rel="noopener">
+      <span class="t">From Marketing Webinars to a Micro SaaS: The Tool is Live</span>
+      <span class="c">Hashnode</span>
+    </a>
+     <a class="row" href="https://shanirivers.hashnode.dev/simple-guide-to-using-google-and-auth0-for-easy-authentication" target="_blank" rel="noopener">
+      <span class="t">A (Somewhat) Simple Guide to Using Google and Auth0 for Easy Authentication</span>
+      <span class="c">Hashnode</span>
+    </a>
+  </div>
+  <a class="writing-cta reveal" href="https://shanirivers.hashnode.dev/" target="_blank" rel="noopener">All articles on Hashnode</a>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="wrap">
+  <div class="section-head reveal">
+    <span class="num">04.</span><h2>About</h2>
+  </div>
+  <div class="about reveal">
+    <div class="portrait">
+      <!-- Add assets/profile.jpg to your repo. Falls back to a label if missing. -->
+      <img src="./assets/profile.jpeg" alt="Shani Rivers"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="ph" style="display:none">Add assets/profile.jpg</div>
+    </div>
+    <div class="bio">
+      <p>I am a data analyst and developer with close to a decade of SaaS implementation and support experience with loads of data governance and a few years of freelance web/app development in between. I build data products, ship small software, and help people make sense of their own information.</p>
+      <p>Away from the screen: knitting, parenting, running (5k's and a marathon), martial arts and reading. </p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="wrap contact">
+  <div class="reveal">
+    <h2 class="lead">Let's make something <em>honest</em>.</h2>
+
+    <form class="form" id="form" name="simple-contact-form" accept-charset="utf-8"
+          action="https://formspree.io/f/mwkgpqqn" method="post">
+      <div>
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" name="name" id="full-name"
+                 placeholder="Your name, pretty please." required>
+        </div>
+      </div>
+
+      <div>
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="email" name="_replyto" id="email-address"
+                 placeholder="email@domain.tld" required>
+        </div>
+      </div>
+
+      <div>
+        <label class="label">Message</label>
+        <div class="control">
+          <textarea class="input" rows="5" name="message" id="message"
+                    placeholder="Your message goes here... just stating the obvious." required></textarea>
+        </div>
+      </div>
+
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      <button id="submit" type="submit"><b>SEND!</b></button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; <span id="yr"></span> Shani Rivers</span>
+  <div class="social">
+    <a href="https://github.com/shanirivers" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://YOURNAME.hashnode.dev" target="_blank" rel="noopener">Hashnode</a>
+    <a href="https://www.linkedin.com/in/shanirivers/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+<!--  <footer class="footer">
     <div class="container">
       <div class="content has-text-centered socialmenu">
         <div class="columns">
@@ -475,7 +396,7 @@
           </p>
         </div>
       </div>
-  </footer>
+  </footer>-->
 </body>
 
 <script src="/js/main.js"></script>
